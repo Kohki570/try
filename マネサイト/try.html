@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="serial" id="element01" value="" placeholder="ご入力ください" class="c-formItem elem_text"
+        maxlength="255">
+    <input type="submit" value="送信" id="submitBtn">
+
+    <script>
+        var input = document.getElementById("element01");
+        var submit = document.getElementById("submitBtn");
+
+
+        var input = document.getElementById("element01");
+
+input.addEventListener("keydown", function(event) {
+  if (event.keyCode === 13) {
+    submitForm();
+  }
+});
+
+function submitForm() {
+  var serial = input.value;
+  if (serial === "1020") {
+    window.location.href = "file1.html";
+  } else if (serial === "2222") {
+    window.location.href = "file2.html";
+  } else {
+    
+  }
+}
+
+        submit.addEventListener("click", function () {
+            var serial = input.value;
+            if (serial === "1020") {
+                window.location.href = "file1.html";
+            } else if (serial === "2222") {
+                window.location.href = "file2.html";
+            } else {
+                
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>
